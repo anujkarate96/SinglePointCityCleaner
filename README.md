@@ -1,0 +1,2 @@
+# SinglePointCityCleaner
+Single point city cleaner is a web application which provides a platform to make our city neat and clean. If users find garbage or plastic waste or any kind of garbage on roads, they can capture images and submit to our system. Municipal company of that area can directly see all posts and reports submitted by users and according to priority they must take actions and reply to users. Users can also check the status of the complaints and send feedback to the company once the work is done.
