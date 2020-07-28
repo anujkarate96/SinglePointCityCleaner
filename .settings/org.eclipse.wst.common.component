@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="Temp Single point city cleaner">
+		<wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+		<property name="context-root" value="Temp_Single_point_city_cleaner"/>
+		<property name="java-output-path" value="/Temp Single point city cleaner/build/classes"/>
+	</wb-module>
+</project-modules>

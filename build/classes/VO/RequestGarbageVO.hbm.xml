@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.RequestGarbageVO" table="requestgarbage">
+		<id name="rgid" type="int" column="no">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<property name="subject">
+			<column name="Subject" />
+		</property>
+
+
+		<property name="discription">
+			<column name="DisCription" />
+		</property>
+
+
+		<property name="date1">
+			<column name="BookingDate" />
+		</property>
+
+		<property name="date2">
+			<column name="Bookingtime" />
+		</property>
+
+		<property name="reqdate">
+			<column name="Requestdate" />
+		</property>
+
+		<property name="reqtime">
+			<column name="Requesttime" />
+		</property>
+
+		<property name="replyFromCompany">
+			<column name="replyFromCompany" />
+		</property>
+
+		<property name="deletestatus">
+			<column name="deletestatus" />
+		</property>
+
+
+		<property name="requestStatus">
+			<column name="requestStatus" />
+		</property>
+
+		<many-to-one name="areaVO" class="VO.AreaVO" column="Area"></many-to-one>
+		<many-to-one name="requestFrom" class="VO.LoginVO" column="requestFrom"></many-to-one>
+		<many-to-one name="requestTo" class="VO.CompanyVO" column="requestTo"></many-to-one>
+		<many-to-one name="cityVO" class="VO.CityVO" column="city"></many-to-one>
+		<many-to-one name="catagoryVO" class="VO.CatagoryVO"
+			column="Category"></many-to-one>
+		<many-to-one name="subcatagoryVO" class="VO.SubCatagoryVO"
+			column="SubCategory"></many-to-one>
+
+	</class>
+</hibernate-mapping>

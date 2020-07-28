@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class"> com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://awsrds.cfbwzeuovckq.us-east-1.rds.amazonaws.com:3306/Mydb</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping resource="VO/CatagoryVO.hbm.xml" />
+		<mapping resource="VO/CityVO.hbm.xml" />
+		<mapping resource="VO/AreaVO.hbm.xml" />
+		<mapping resource="VO/SubCatagoryVO.hbm.xml" />
+		<mapping resource="VO/RegVO.hbm.xml" />
+		<mapping resource="VO/LoginVO.hbm.xml" />
+		<mapping resource="VO/FeedbackVO.hbm.xml" />
+		<mapping resource="VO/ComplaintVO.hbm.xml" />
+		<mapping resource="VO/RequestGarbageVO.hbm.xml" />
+		<mapping resource="VO/CompanyVO.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.CityVO" table="city">
+		<id name="cid" type="int" column="no">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<property name="cityName">
+			<column name="CityName" />
+		</property>
+
+		<property name="cityDisCription">
+			<column name="CityDisCription" />
+		</property>
+
+
+		<property name="deleteStatus">
+			<column name="deleteStatus" />
+		</property>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.ComplaintVO" table="complaint">
+		<id name="complaintid" type="int" column="no">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<property name="discription">
+			<column name="ComplaintDisCription" />
+		</property>
+
+		<property name="date">
+			<column name="Date" />
+		</property>
+
+
+		<property name="time">
+			<column name="Time" />
+		</property>
+
+		<property name="reply">
+			<column name="reply" />
+		</property>
+
+
+		<property name="filename">
+			<column name="filename" />
+		</property>
+
+		<property name="filepath">
+			<column name="filepath" />
+		</property>
+
+
+		<property name="complaintStatus">
+			<column name="complaintStatus" />
+		</property>
+
+
+		<many-to-one name="areaVO" class="VO.AreaVO" column="Area"></many-to-one>
+		<many-to-one name="cityVO" class="VO.CityVO" column="City"></many-to-one>
+
+		<many-to-one name="complaintfrom" class="VO.LoginVO"
+			column="complaintfrom"></many-to-one>
+		<many-to-one name="complaintTo" class="VO.LoginVO" column="complaintTo"></many-to-one>
+		<many-to-one name="company" class="VO.CompanyVO" column="company"></many-to-one>
+
+		<property name="deletestatus">
+			<column name="deletestatus" />
+		</property>
+
+	</class>
+</hibernate-mapping>

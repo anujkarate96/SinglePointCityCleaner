@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.SubCatagoryVO" table="wastesubcatagory">
+		<id name="id" type="int" column="no">
+			<generator class="increment">
+			</generator>
+
+		</id>
+
+		<property name="subcatagoryName">
+			<column name="subcatagoryname" />
+		</property>
+
+		<property name="subcatagoryDiscription">
+			<column name="subcatagorydescription" />
+		</property>
+
+		<property name="deleteStatus">
+			<column name="deleteStatus" />
+		</property>
+		<many-to-one name="catagoryVO" class="VO.CatagoryVO"
+			column="catagory"></many-to-one>
+	</class>
+</hibernate-mapping>
